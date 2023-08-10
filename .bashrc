@@ -10,14 +10,16 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups
 
 # append to the history file, don't overwrite it
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
-HISTFILESIZE=2000
+HISTFILESIZE=1000
+
+export PROMPT_COMMAND="history -a; history -n"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -29,6 +31,9 @@ shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+export PATH=$PATH:/home/amueller/.local/bin/
+eval $(thefuck --alias)
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -72,38 +77,12 @@ xterm*|rxvt*)
     ;;
 esac
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='exa -lF'
-alias ls='exa -F'
-alias l='exa -F'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -116,25 +95,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Powerline configuration
-if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
-  powerline-daemon -q
-  POWERLINE_BASH_CONTINUATION=1
-  POWERLINE_BASH_SELECT=1
-  source /usr/share/powerline/bindings/bash/powerline.sh
-fi
-
-# fzf
-source /home/amueller/git/fzf-git.sh/fzf-git.sh
-
-export FZF_TMUX_OPTS="-w 80% -h 80%"
-export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
-export FZF_DEFAULT_COMMAND="fd --type file --strip-cwd-prefix --color=always" 
-export FZF_DEFAULT_OPTS="--ansi"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_CTRL_T_OPTS="--preview 'bat --color=always {}' --preview-window hidden --bind '?:toggle-preview' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+eval `dircolors /home/amueller/.dir_colors/dircolors`
 
 . "$HOME/.cargo/env"
-source /home/amueller/git/alacritty/extra/completions/alacritty.bash
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source ~/.bash_aliases
+source ~/.bash_fzf
+source ~/.bash_powerline
+source /home/amueller/git/alacritty/extra/completions/alacritty.bash

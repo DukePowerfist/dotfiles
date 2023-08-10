@@ -1,0 +1,15 @@
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# fzf-git
+source /home/amueller/git/fzf-git.sh/fzf-git.sh
+
+# fzf options
+#export FZF_TMUX_OPTS="-w 80% -h 80%"
+
+export FZF_CTRL_R_OPTS="--height 60% --preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
+export FZF_DEFAULT_COMMAND="fd --type file --strip-cwd-prefix --color=always" 
+export FZF_DEFAULT_OPTS="--ansi --border --scroll-off=4"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--height 100% --preview 'bat --color=always {}' --preview-window hidden --bind '?:toggle-preview' --bind shift-up:preview-page-up,shift-down:preview-page-down"
+

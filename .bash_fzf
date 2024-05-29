@@ -2,7 +2,7 @@
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # fzf-git
-source /home/amueller/git/fzf-git.sh/fzf-git.sh
+source /home/amue/git/fzf-git.sh/fzf-git.sh
 
 # fzf options
 #export FZF_TMUX_OPTS="-w 80% -h 80%"

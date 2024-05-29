@@ -18,6 +18,7 @@ Plug 'dracula/vim'
 
 " nvim status bar
 Plug 'nvim-lualine/lualine.nvim'
+" Plug 'vim-airline/vim-airline'
 
 " allow icons with colors 
 Plug 'ryanoasis/vim-devicons'

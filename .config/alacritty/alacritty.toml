@@ -1,18 +1,20 @@
+import = ["/home/amue/git/alacritty-master/dracula.toml"]
+# import = ["/home/amue/git/tokyonight.nvim/extras/alacritty/tokyonight_night.toml"]
 [font]
-size = 12
+size = 11
 
 [font.bold]
-family = "Source Code Pro"
+family = "Cascadia Code NF"
 style = "Bold"
 
 [font.bold_italic]
-family = "Source Code Pro"
+family = "Cascadia Code NF"
 style = "Bold Italic"
 
 [font.italic]
-family = "Source Code Pro"
+family = "Cascadia Code NF"
 style = "Italic"
 
 [font.normal]
-family = "Source Code Pro"
+family = "Cascadia Code NF"
 style = "Regular"

@@ -34,6 +34,7 @@ shopt -s checkwinsize
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH=$PATH:/home/amue/.cargo/bin
+export RIPGREP_CONFIG_PATH=/home/amue/.ripgreprc
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -124,4 +125,5 @@ fi
 
 source ~/.bash_fzf
 source ~/.bash_powerline
-source /home/amue/git/alacritty/extra/completions/alacritty.bash
+source /home/amue/git/amue/alacritty/extra/completions/alacritty.bash
+. "$HOME/.cargo/env"

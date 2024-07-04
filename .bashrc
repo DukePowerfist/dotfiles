@@ -126,4 +126,3 @@ fi
 source ~/.bash_fzf
 source ~/.bash_powerline
 source /home/amue/git/amue/alacritty/extra/completions/alacritty.bash
-. "$HOME/.cargo/env"

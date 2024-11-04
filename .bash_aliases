@@ -1,8 +1,8 @@
 # .bash_aliases
 
 alias vim=nvim
-alias ll='eza -lF'
-alias la='eza -la'
-alias l='eza -F'
+alias ll='eza -lF --git --icons'
+alias la='eza -laF --git --icons'
+alias l='eza -F --git'
 
 

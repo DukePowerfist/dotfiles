@@ -61,3 +61,5 @@ unset rc
 
 source ~/.bash_fzf
 source ~/.bash_powerline
+
+eval "$(starship init bash)"

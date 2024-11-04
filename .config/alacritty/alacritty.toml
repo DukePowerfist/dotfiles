@@ -18,4 +18,4 @@ family = "Cascadia Code NF"
 style = "Regular"
 
 [general]
-import = ["/home/amueller/workspace/dracula/alacritty/dracula.toml"]
+import = ["/home/amueller/workspace/amue/dotfiles/.config/alacitty/dracula.toml"]

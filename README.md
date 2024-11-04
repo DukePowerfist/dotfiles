@@ -4,14 +4,14 @@
 - eza
 - fd-find
 - ripgrep
-- powerline powerline-fonts
-- tmux-powerline
+- starship
+- zellij
+- dua-cli
+- dysk
+- bottom
 - rust
 - neovim
 - vim plug manager
-- tmux plug manager
-- tmux
 - fzf
 - fzf-git
-- gitmux (contained in .local atm)
 

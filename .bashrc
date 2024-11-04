@@ -60,6 +60,5 @@ unset rc
 . "$HOME/.cargo/env"
 
 source ~/.bash_fzf
-source ~/.bash_powerline
 
 eval "$(starship init bash)"

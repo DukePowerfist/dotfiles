@@ -1,0 +1,19 @@
+M /home/amueller/workspace/amue/dotfile_backup
+P 
+S 0
+R 0
+F 1
+C 0
+Z 0
+I /home/amueller/.config/alacritty
+I /home/amueller/.config/nvim
+I /home/amueller/.config/zellij
+I /home/amueller/.config/starship.toml
+I /home/amueller/.bash_aliases
+I /home/amueller/.bash_fzf
+I /home/amueller/.bash_zellij.sh
+I /home/amueller/.bashrc
+I /home/amueller/.gitconfig
+I /home/amueller/.gitignore
+I /home/amueller/.ripgreprc
+I /home/amueller/update_all_my_shit_dude.sh

@@ -1,59 +1,32 @@
 # To install
 
-## alacritty
-
-man exists!
-sudo dnf install alacritty
-
-## eza
-
-cargo install eza
-
-## fd-find
-
-man exists!
-sudo dnf install fd-find
-
-## ripgrep
-
-man exists!
-sudo dnf install ripgrep
-
-##  starship
-
-#curl -sS https://starship.rs/install.sh | sh
-
-## zellij
-
-dnf install gcc perl-FindBin perl-IPC-Cmd perl-File-Compare perl-File-Copy
-cargo install --locked zellij
-
-
-## dua-cli
-
-cargo install dua-cli
-
-## dysk
-
-cargo install dysk
-
-## bottom
-
-cargo install bottom
-
 ## rust
 
-Use rust homepage!
+Use rust homepage to install rust.
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-## git-delta
+## cowsay alacritty, fd-find, ripgrep, git-delta, neovim 
 
-sudo dnf install git-delta
+sudo dnf install cowsay alacritty fd-find ripgrep git-delta neovim
 
-## neovim
+## prerequisites for zellij 
 
-sudo dnf install neovim
+sudo dnf install gcc perl-FindBin perl-IPC-Cmd perl-File-Compare perl-File-Copy
 
-## vim plug manager
+
+## prerequisites for cargo-update
+
+sudo dnf installzz openssl-devel
+
+## zellij, eza, dua-cli, dysk, bottom, cargo-update
+cargo install --locked zellij
+cargo install eza dua-cli dysk bottom cargo-update
+
+## starship
+
+curl -sS https://starship.rs/install.sh | sh
+
+## nvim plugin manager
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

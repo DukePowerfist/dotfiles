@@ -23,7 +23,6 @@ $python\
 $docker_context\
 $conda\
 [](fg:color_bg3 bg:color_bg1)\
-$time\
 [ ](fg:color_bg1)\
 $line_break$character"""
 
@@ -81,12 +80,12 @@ format = "[ $path ]($style)"
 truncation_length = 8
 truncation_symbol = "…/"
 
-# [directory.substitutions]
-# "Documents" = "󰈙 Documents"
-# "Downloads" = " Downloads"
-# "Music" = "󰝚 Music"
-# "Pictures" = " Pictures"
-# "workspace" = "󰲋 workspace"
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
 
 [git_branch]
 symbol = ""

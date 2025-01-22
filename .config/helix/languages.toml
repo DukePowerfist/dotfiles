@@ -1,5 +1,10 @@
 [[language]]
+name = "c"
+rulers = [80]
+
+[[language]]
 name = "rust"
+rulers = [100]
 
 roots = [
   "Cargo.toml",
@@ -7,7 +12,18 @@ roots = [
 ]
 
 [language-server.rust-analyzer.config]
-checkOnSave = {command = "clippy"}
+check.command = "clippy"
 cargo = {allFeatures = true}
 procMacro = {enable = true }
-auto-format = true
+auto-format = tru
+
+[[language]]
+name = "xml"
+rulers = [100]
+file-types = [ "xml", "svg", "xsd", "xslt", "xsl" ]
+#auto-format = true
+formatter = { command = "xmllint", args = ["--format", "-"] }
+language-servers = [ "xml" ]
+
+[language-server.xml]
+command = "lemminx-linux"

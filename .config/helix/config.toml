@@ -4,6 +4,8 @@ theme = "dracula"
 line-number = "relative"
 cursorline = true
 cursorcolumn = true
+scrolloff = 10
+bufferline = "always"
 
 [editor.statusline]
 left = [ "mode", "spinner", "diagnostics", "workspace-diagnostics" ]

@@ -1,0 +1,21 @@
+theme = "dracula"
+
+[editor]
+line-number = "relative"
+cursorline = true
+cursorcolumn = true
+
+[editor.statusline]
+left = [ "mode", "spinner", "diagnostics", "workspace-diagnostics" ]
+center = [ "file-modification-indicator", "file-name", "spacer", "version-control" ]
+right = [ "position", "position-percentage", "total-line-numbers" ]
+separator = "│"
+mode.normal = "NORMAL 🐸"
+mode.insert = "INSERT 🦊"
+mode.select = "SELECT 🐷"
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[keys.normal]
+C-l = ":toggle-option inline-diagnostics.cursor-line disable hint"

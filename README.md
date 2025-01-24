@@ -1,5 +1,18 @@
 # To install
-
+amp           v0.7.1     v0.7.1    No
+binsider      v0.2.1     v0.2.1    No
+bottom        v0.10.2    v0.10.2   No
+cargo-update  v16.1.0    v16.1.0   No
+dua-cli       v2.29.4    v2.29.4   No
+dysk          v2.10.0    v2.10.0   No
+eza           v0.20.18   v0.20.18  No
+git-cliff     v2.7.0     v2.7.0    No
+gitui         v0.27.0    v0.27.0   No
+hexyl         v0.16.0    v0.16.0   No
+procs         v0.14.9    v0.14.9   No
+rustlings     v6.4.0     v6.4.0    No
+zellij        v0.41.2    v0.41.2   No
+ghostty
 ## rust
 
 Use rust homepage to install rust.
